@@ -8945,12 +8945,16 @@
             const galerySlider = document.querySelector(
                 ".galery-sercices__slider"
             )
+            const servicesSlider = document.querySelector(
+                ".about-services__slider"
+            )
             let rentalSwiper
             let askedSwiper
             let fractionSwiper
             let aboutUsSwiper
             let atmosSwiper
             let galerySwiper
+            let servicesSwiper
             function initSliders() {
                 if (window.innerWidth <= 767.98) {
                     if (rentalSlider && !rentalSwiper)
@@ -9074,6 +9078,26 @@
                             },
                             on: {},
                         })
+                    if (servicesSlider && !servicesSwiper)
+                        galerySwiper = new core(".about-services__slider", {
+                            modules: [Pagination],
+                            observer: true,
+                            observeParents: true,
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                            speed: 1e3,
+                            loop: true,
+                            autoplay: {
+                                delay: 1500,
+                                stopOnLastSlide: false,
+                                disableOnInteraction: false,
+                            },
+                            pagination: {
+                                el: ".about-services__swiper-pagination",
+                                clickable: true,
+                            },
+                            on: {},
+                        })
                 } else {
                     if (rentalSwiper) {
                         rentalSwiper.destroy()
@@ -9098,6 +9122,10 @@
                     if (galerySwiper) {
                         galerySwiper.destroy()
                         galerySwiper = null
+                    }
+                    if (servicesSwiper) {
+                        servicesSwiper.destroy()
+                        servicesSwiper = null
                     }
                 }
                 // new core(".main__slider", {
@@ -14036,6 +14064,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
             })
         }
+       
+        
         //!Add vido from youtube
         window.addEventListener("DOMContentLoaded", function () {
             const videos = document.querySelectorAll(".atmos__slide--video")
@@ -14053,7 +14083,6 @@ PERFORMANCE OF THIS SOFTWARE.
                     )
                 })
             }
-            
         })
         initModalHandlers("[data-show-modal]", "[data-modal]")
         initModalHandlers("[data-show-modal-price]", "[data-modal-price]")
@@ -14168,6 +14197,7 @@ PERFORMANCE OF THIS SOFTWARE.
         isWebp()
         menuInit()
         spollers()
+      
         tabs()
         formFieldsInit({
             viewPass: false,
