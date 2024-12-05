@@ -35142,7 +35142,7 @@ body .page {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/images/update_page/video-btn.svg") center / 80px no-repeat;
+    background: url("images/update_page/video-btn.svg") center / 80px no-repeat;
 }
 
 .ready.atmos__slide--video:after {
@@ -35610,8 +35610,6 @@ body .page {
     background-color: #f2f6f8;
 }
 
-.page__why-choose {
-}
 
 .why-choose {
     position: relative;
@@ -36312,9 +36310,6 @@ td {
 }
 
 
-
-.serv-new__reviews{}
-
 .reviews-serv {
     background-color: #F2F6F8;
 }
@@ -36332,7 +36327,7 @@ td {
     gap: 15px;
 
 }
-.reviews-serv__body{}
+
 .reviews-serv__rating{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -36707,17 +36702,12 @@ td {
     width: 24px;
     height: 24px;
 }
-.feedback__rating {
-    
 
-}
 .feedback__actions{
     text-align: center;
 }
 
 
-.image-list {
-}
 
 .label-btn {
     display: -webkit-inline-box;
@@ -36773,7 +36763,7 @@ td {
 @media (min-width: 767.98px) {
     .hottest::before {
         content: "";
-        background: url("/images/update_page/decore-hottest.svg") 0 0 no-repeat;
+        background: url("images/update_page/decore-hottest.svg") 0 0 no-repeat;
         position: absolute;
         left: 0;
         top: 0;
@@ -36799,7 +36789,7 @@ td {
         position: absolute;
         top: 0;
         left: 0;
-        background: url("/images/update_page/rewies-icons/decor.svg") 0 0 /
+        background: url("images/update_page/rewies-icons/decor.svg") 0 0 /
             cover no-repeat;
         width: 100%;
         height: 100%;
@@ -36872,7 +36862,7 @@ td {
     }
 
     .why-choose::before {
-        background: url("/images/update_page/why-choose-decor.svg") 0 0
+        background: url("images/update_page/why-choose-decor.svg") 0 0
             no-repeat;
         width: 1418.763px;
         height: 1041.646px;
@@ -37053,7 +37043,7 @@ td {
     .atmos::after {
         content: "";
         position: absolute;
-        background: url("/images/update_page/about-main/decor-mid.svg") 0 0
+        background: url("images/update_page/about-main/decor-mid.svg") 0 0
             no-repeat;
         bottom: 0;
         right: 0;
@@ -37073,7 +37063,7 @@ td {
     .book-how::after {
         content: "";
         position: absolute;
-        background: url("/images/update_page/about-main/decor-down.svg") 0 0
+        background: url("images/update_page/about-main/decor-down.svg") 0 0
             no-repeat;
         bottom: 0;
         right: 0;
@@ -37191,7 +37181,7 @@ td {
         position: absolute;
         top: 0;
         left: 0;
-        background: url("/images/update_page/faq-decor/left-decor.svg") 0 0
+        background: url("images/update_page/faq-decor/left-decor.svg") 0 0
             no-repeat;
         width: 1445.817px;
         height: 1061.094px;
@@ -37207,7 +37197,7 @@ td {
         position: absolute;
         top: 0;
         right: 0;
-        background: url("/images/update_page/faq-decor/right-decor.svg") 0 0
+        background: url("images/update_page/faq-decor/right-decor.svg") 0 0
             no-repeat;
         width: 1440px;
         height: 13213px;
@@ -37348,7 +37338,7 @@ td {
         position: absolute;
         top: -696px;
         left: -660px;
-        background:  url('/images/update_page/services/suitable/decor-top.svg') 0 0 no-repeat;
+        background:  url('images/update_page/services/suitable/decor-top.svg') 0 0 no-repeat;
         width: 1445.937px;
         height: 1238.429px;
         -webkit-transform: rotate(-16.185deg);
@@ -37361,7 +37351,7 @@ td {
         position: absolute;
         bottom: -130px;
         right: -762px;
-        background:  url('/images/update_page/services/suitable/decor-down.svg') 0 0 no-repeat;
+        background:  url('images/update_page/services/suitable/decor-down.svg') 0 0 no-repeat;
         width: 1414.62px;
         height: 1038.198px;
         -webkit-transform: rotate(-17.92deg);
@@ -37912,7 +37902,7 @@ td {
     }
 
     .why-choose::before {
-        background: url("/images/update_page/why-choose-decor-mobile.svg") 0 0
+        background: url("images/update_page/why-choose-decor-mobile.svg") 0 0
             no-repeat;
         width: 100%;
         height: 100%;
@@ -38010,7 +38000,7 @@ td {
         position: absolute;
         top: 0;
         left: 0;
-        background: url("/images/update_page/galery-decor.svg") 0 0 / cover
+        background: url("images/update_page/galery-decor.svg") 0 0 / cover
             no-repeat;
         width: 100%;
         height: 100%;
@@ -38122,7 +38112,7 @@ td {
 
     .hottest::before {
         content: "";
-        background: url("/images/update_page/decor-hot-mob-top.svg") 0 0
+        background: url("images/update_page/decor-hot-mob-top.svg") 0 0
             no-repeat;
         position: absolute;
         left: 0;
@@ -38138,7 +38128,7 @@ td {
 
     .hottest::after {
         content: "";
-        background: url("/images/update_page/decor-hot-mob-down.svg") 0 0
+        background: url("images/update_page/decor-hot-mob-down.svg") 0 0
             no-repeat;
         position: absolute;
         left: 0;
