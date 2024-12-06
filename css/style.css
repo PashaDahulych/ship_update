@@ -36571,7 +36571,7 @@ td {
 .feedback__lines{
     display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 .feedback__line input,
@@ -37819,6 +37819,10 @@ td {
         padding-top: 58px;
         padding-bottom: 48px;
     }
+    .suitable__decor-top,
+    .suitable__decor-down {
+        display: none;
+    }
     .reviews-serv__container {
         padding-inline: 20px;
     }
@@ -38295,7 +38299,7 @@ td {
         font-size: 28px;
     }
     .feedback .popup__content{
-        padding: 30px 30px 30px 50px;
+        padding: 30px 30px 50px 30px;
     }
     .feedback__item {
         -webkit-box-orient: vertical;
