@@ -6332,7 +6332,7 @@ body::after {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    max-width: 456px;
+    max-width: 465px;
     margin: 0 auto;
 }
 
