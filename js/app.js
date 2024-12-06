@@ -14064,7 +14064,67 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
             })
         }
-       
+        
+        function digitalCounterInit(digitalCounterItems) {
+            let digitsCounters = digitalCounterItems
+                ? digitalCounterItems
+                : document.querySelectorAll( "[data-digits-counter]" )
+            
+            if (digitsCounters) {
+                for ( const digitsCounter of digitsCounters ) {
+                    digitsCounterAnimate(digitsCounter)
+                }
+            }
+        }
+
+        function digitsCounterAnimate ( digitsCounter ) {
+            let startTimestemp = null
+            const duration = parseInt( digitsCounter.dataset.digitsCounter ) ? parseInt( digitsCounter.dataset.digitsCounter ) : 1000
+            const startValue = parseInt(digitsCounter.innerHTML)
+            const startPosition = 0
+
+            const step = ( timestamp ) => {
+                if ( !startTimestemp ) startTimestemp = timestamp
+                
+                const progres = Math.min( ( timestamp - startTimestemp ) / duration, 1 )
+                digitsCounter.innerHTML = Math.floor(progres * (startPosition + startValue))
+
+                if (progres < 1) {
+                    window.requestAnimationFrame(step)
+                }
+            }
+            window.requestAnimationFrame(step)
+        }
+        // digitalCounterInit()
+
+        function showDigitsSection() {
+            let options = {
+                threshold: 0.3
+            }
+
+            let observer = new IntersectionObserver( ( entries, observer ) => {
+                for (const entry of entries) {
+                    if ( entry.isIntersecting ) {
+                        const targetElement = entry.target
+                        const digitsConutersItems =
+                            targetElement.querySelectorAll(
+                                "[data-digits-counter]"
+                            )
+                        if(digitsConutersItems.length) digitalCounterInit()
+
+                        observer.unobserve(targetElement)
+                    }
+                }
+            }, options)
+
+            let sections = document.querySelectorAll( '[data-digit]' )
+            if (sections.length) {
+                for (const section of sections) {
+                    observer.observe(section)
+                }
+            }
+        }
+        showDigitsSection()
         
         //!Add vido from youtube
         window.addEventListener("DOMContentLoaded", function () {
@@ -14197,7 +14257,6 @@ PERFORMANCE OF THIS SOFTWARE.
         isWebp()
         menuInit()
         spollers()
-      
         tabs()
         formFieldsInit({
             viewPass: false,

@@ -1206,3 +1206,14 @@ $('#select-currency').change(function (e){
     location.href = '/site/change-currency?currency=' + selectedValue;
     console.log(selectedValue);
 });
+
+
+$('.select_form-sort button.select-main__option').on('click' , function (e){
+    e.preventDefault();
+    var dataId = $(this).attr('data-value');
+    var option = $('#sort-by option[value="' + dataId + '"]');
+    console.log('click ' + dataId);
+    console.log(option.attr('data-url'));
+    var sortUrl = option.attr('data-url');
+    location.href = sortUrl;
+});
