@@ -2511,6 +2511,37 @@
                 FLS(`[Форми]: ${message}`)
             }
         }
+        function formQuantity() {
+            document.addEventListener("click", function (e) {
+                let targetElement = e.target
+                if (
+                    targetElement.closest("[data-quantity-plus]") ||
+                    targetElement.closest("[data-quantity-minus]")
+                ) {
+                    const valueElement = targetElement
+                        .closest("[data-quantity]")
+                        .querySelector("[data-quantity-value]")
+                    let value = parseInt(valueElement.value)
+                    if (targetElement.hasAttribute("data-quantity-plus")) {
+                        value++
+                        if (
+                            +valueElement.dataset.quantityMax &&
+                            +valueElement.dataset.quantityMax < value
+                        )
+                            value = valueElement.dataset.quantityMax
+                    } else {
+                        --value
+                        if (+valueElement.dataset.quantityMin) {
+                            if (+valueElement.dataset.quantityMin > value)
+                                value = valueElement.dataset.quantityMin
+                        } else if (value < 1) value = 1
+                    }
+                    targetElement
+                        .closest("[data-quantity]")
+                        .querySelector("[data-quantity-value]").value = value
+                }
+            })
+        }
         class SelectConstructor {
             constructor(props, data = null) {
                 let defaultConfig = {
@@ -9214,6 +9245,20 @@
                     },
                     on: {},
                 })
+                new core(".booking__slider", {
+                    modules: [Navigation],
+                    observer: true,
+                    observeParents: true,
+                    spaceBetween: 20,
+                    autoHeight: false,
+                    speed: 500,
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: ".booking__swiper-button-prev",
+                        nextEl: ".booking__swiper-button-next",
+                    },
+                    on: {},
+                })
             }
             new core(".trending__slider", {
                 modules: [Navigation],
@@ -14262,6 +14307,7 @@ PERFORMANCE OF THIS SOFTWARE.
             viewPass: false,
             autoHeight: false,
         })
+        formQuantity()
         formSubmit()
         pageNavigation()
         headerScroll()
