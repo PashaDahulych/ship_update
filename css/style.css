@@ -5351,8 +5351,8 @@ body::after {
     -ms-flex-align: center;
     align-items: center;
     position: absolute;
-    backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.8);
+    /* backdrop-filter: blur(20px); */
     border-bottom: 0.125rem solid #90bfdb;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -7093,10 +7093,10 @@ body::after {
 }
 
 [class*="__small-container"] {
-    max-width: 79rem;
+    max-width: 80rem;
     margin: 0 auto;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
 }
 
 .our-services {
@@ -19122,6 +19122,7 @@ body:not(.lg-from-hash)
     .menu-footer {
         padding-bottom: 2rem;
         border-bottom: 0.0625rem solid #487791;
+        padding-inline: 20px;
     }
 
     .menu-footer__menu ul {
@@ -19132,6 +19133,14 @@ body:not(.lg-from-hash)
     .contact-footer {
         padding-bottom: 2rem;
         border-bottom: 0.0625rem solid #487791;
+        padding-inline: 20px;
+    }
+    
+    .about-us-footer,
+    .follow-us-footer,
+    .footer__actions,
+    .quick-footer__links {
+        padding-inline: 20px;
     }
 
     .log-in-footer__button {
@@ -19159,6 +19168,7 @@ body:not(.lg-from-hash)
         margin: 0 auto;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        padding-inline: 6.5px;
     }
 
     .info-footer__logo {
@@ -19170,6 +19180,7 @@ body:not(.lg-from-hash)
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+        padding-inline: 6.5px;
     }
 
     .main__swiper-pagination {
@@ -36157,9 +36168,7 @@ body .page {
 .main-reviews__list {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -36308,7 +36317,7 @@ body .page {
     border-radius: 38px;
     border: 1px solid #90bfdb;
     background-color: #fff;
-    padding: 6.5px 15px 3.5px 15px;
+    padding: 5.5px 15px 4.5px 15px;
     color: #487791;
     line-height: 1.5;
     cursor: pointer;
@@ -39065,7 +39074,15 @@ td {
 }
 
 
-
+.labels__ends {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 4px 8px 2px 8px;
+    border-radius: 10px 0px;
+    background-color: #0016DD;
+}
 
 
     /* Booking details in user account end  */
@@ -39802,6 +39819,12 @@ td {
     }
 }
 
+@media (max-width: 1200px){
+    .main-reviews__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 1070px) {
     .types-boat__list,
     .explore__list {
@@ -39814,6 +39837,9 @@ td {
 }
 
 @media (max-width: 991.98px) {
+    .main-reviews__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .serv-new__about-main .about-main__decor {
         display: none;
     }
@@ -40084,7 +40110,7 @@ td {
 
     .main-policy {
         padding-top: 58px;
-        padding-bottom: 48px;
+        padding-bottom: 99px;
     }
 
     .main-serv-new__container {
@@ -40417,10 +40443,10 @@ td {
         width: 100%;
         height: 100%;
     }
-     .why-choose__decor img {
+    .why-choose__decor img {
         width: 100%;
         height: 100%;
-     }
+    }
 
     .galery-sercices__action {
         display: none;
@@ -40934,6 +40960,10 @@ td {
     .explore__list {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    }
+    .main-reviews__list {
+        grid-template-columns: 1fr;
+        -ms-grid-columns: 1fr;
     }
 }
 
