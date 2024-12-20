@@ -407,7 +407,7 @@ body {
 [class*="__container"] {
     max-width: 1364px;
     margin: 0 auto;
-    padding: 0 12px;
+    padding-inline: 12px;
 }
 
 .hidden {
@@ -7093,10 +7093,9 @@ body::after {
 }
 
 [class*="__small-container"] {
-    max-width: 80rem;
+    max-width: 1280px;
     margin: 0 auto;
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
+    padding-inline: 20px;
 }
 
 .our-services {
