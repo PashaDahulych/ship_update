@@ -35719,6 +35719,9 @@ body .page {
     position: relative;
     z-index: 3;
 }
+.main-reviews__container {
+    max-width: 1298px;
+}
 .about-main__info h2,
 .atmos__container h2,
 .book-how__container h2,
@@ -39848,9 +39851,7 @@ td {
         width: 1414px;
         height: 1038px;
     }
-    .main-reviews__list {
-        padding-inline: 33px;
-    }
+    
 }
 
 @media (min-width: 1071px) {
